@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/web-ai-code.iml" filepath="$PROJECT_DIR$/web-ai-code.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/web-ai-code-copy.iml" filepath="$PROJECT_DIR$/.idea/web-ai-code-copy.iml" />
     </modules>
   </component>
 </project>
