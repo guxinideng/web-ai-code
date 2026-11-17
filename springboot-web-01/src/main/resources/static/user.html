@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>用户列表</title>
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            padding: 40px 20px;
+            font-family: -apple-system, "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: #f4f6fa;
+            color: #333;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 10px;
+            padding: 24px 28px 30px;
+            box-shadow: 0 2px 12px rgba(0, 0, 0, .08);
+        }
+        h1 { margin: 0 0 20px; font-size: 22px; }
+        .toolbar { display: flex; gap: 10px; margin-bottom: 16px; }
+        .toolbar input {
+            flex: 1;
+            padding: 8px 12px;
+            border: 1px solid #d0d5dd;
+            border-radius: 6px;
+            font-size: 14px;
+        }
+        .toolbar button {
+            padding: 8px 18px;
+            border: none;
+            border-radius: 6px;
+            background: #409eff;
+            color: #fff;
+            font-size: 14px;
+            cursor: pointer;
+        }
+        .toolbar button:hover { background: #2f88e6; }
+        table { width: 100%; border-collapse: collapse; font-size: 14px; }
+        th, td { padding: 11px 12px; text-align: center; border-bottom: 1px solid #ebeef5; }
+        thead th { background: #f5f7fa; color: #606266; font-weight: 600; }
+        tbody tr:hover { background: #f0f7ff; }
+        .tip { padding: 30px 0; text-align: center; color: #909399; }
+        .tip.error { color: #f56c6c; }
+        .count { margin-top: 14px; font-size: 13px; color: #909399; text-align: right; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>用户列表</h1>
+
+    <div class="toolbar">
+        <input id="keyword" type="text" placeholder="按姓名或用户名搜索">
+        <button id="btnRefresh">刷新</button>
+    </div>
+
+    <table>
+        <thead>
+        <tr>
+            <th>ID</th>
+            <th>用户名</th>
+            <th>密码</th>
+            <th>姓名</th>
+            <th>年龄</th>
+            <th>更新时间</th>
+        </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+    </table>
+
+    <div id="tip" class="tip" style="display:none"></div>
+    <div id="count" class="count"></div>
+</div>
+
+<script src="js/user.js"></script>
+</body>
+</html>
