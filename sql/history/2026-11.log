@@ -8,3 +8,18 @@
 2026-11-20 15:30:53 | db01 | INSERT INTO `user_copy` SELECT * FROM `user`
 2026-11-20 15:30:53 | db01 | DROP TABLE user_copy
 2026-11-20 15:30:53 | db01 | ALTER TABLE user DROP COLUMN wechat | 失败(错误码 1091)
+2026-11-20 15:34:21 | db01 | ALTER TABLE `db01`.`user` ADD COLUMN `wechat ` varchar(10) NULL COMMENT '微信账号' AFTER `qq_num` | 失败(错误码 1166)
+2026-11-20 15:34:29 | db01 | ALTER TABLE `db01`.`user` ADD COLUMN `wechat ` varchar(10) NULL COMMENT '微信账号' AFTER `qq_num` | 失败(错误码 1166)
+2026-11-20 15:34:43 | db01 | ALTER TABLE `db01`.`user` ADD COLUMN `wechat ` varchar(10) NULL COMMENT '微信账号' AFTER `qq_num` | 失败(错误码 1166)
+2026-11-20 15:34:59 | db01 | ALTER TABLE `db01`.`user` ADD COLUMN `wechat ` varchar(10) NULL COMMENT '微信账号' AFTER `qq_num` | 失败(错误码 1166)
+2026-11-20 15:37:56 | db01 | ALTER TABLE `db01`.`user` ADD COLUMN `wechat ` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL COMMENT '微信账号' AFTER `qq_num` | 失败(错误码 1166)
+2026-11-20 15:39:46 | db01 | ALTER TABLE `db01`.`user` ADD COLUMN `wechat` varchar(10) CHARACTER SET utf8mb4_unicode_ci COLLATE utf8mb4_unicode_ci NULL COMMENT '微信账号' AFTER `qq_num` | 失败(错误码 1115)
+2026-11-20 15:39:54 | db01 | ALTER TABLE `db01`.`user` ADD COLUMN `wechat` varchar(10) CHARACTER SET utf8mb4_unicode_ci COLLATE utf8mb4_unicode_ci NULL COMMENT '微信账号' AFTER `qq_num` | 失败(错误码 1115)
+2026-11-20 15:42:01 | db01 | ALTER TABLE `db01`.`user` ADD COLUMN `wechat` varchar(20) CHARACTER SET utf8mb4_unicode_ci COLLATE utf8mb4_unicode_ci NOT NULL COMMENT '微信账号' AFTER `qq_num` | 失败(错误码 1115)
+2026-11-20 15:43:00 | db01 | ALTER TABLE `db01`.`user` ADD COLUMN `wechat` varchar(20) CHARACTER SET utf8mb4_unicode_ci COLLATE utf8mb4_unicode_ci NULL COMMENT '微信账号' AFTER `qq_num` | 失败(错误码 1115)
+2026-11-20 15:47:16 | db01 | ALTER TABLE `db01`.`user` ADD COLUMN `wechat` varchar(20) CHARACTER SET utf8mb4_unicode_ci COLLATE utf8mb4_unicode_ci NULL COMMENT '微信账号' AFTER `qq_num` | 失败(错误码 1115)
+2026-11-20 15:47:54 | db01 | ALTER TABLE `db01`.`user` ADD COLUMN `wechat` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci NULL COMMENT '微信账号' AFTER `qq_num`
+2026-11-20 16:02:20 | db01 | CREATE TABLE `db01`.`user_plus` (`id` int NOT NULL AUTO_INCREMENT, PRIMARY KEY (`id`))
+2026-11-20 17:36:46 | db01 | ALTER TABLE `db01`.`user` CHANGE `name` `name` varchar(10) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL COMMENT '姓名'
+2026-11-20 17:38:20 | db01 | CREATE TABLE `db01`.`untitled_table_3` (`id` int AUTO_INCREMENT, PRIMARY KEY (`id`))
+2026-11-20 17:40:15 | db01 | DROP TABLE `db01`.`untitled_table_3`
