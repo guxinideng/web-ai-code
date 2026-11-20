@@ -1,0 +1,10 @@
+# 操作记录(北京时间 | 库 | SQL) —— 只记 javauser 的建/删/改表和增/删/改数据
+2026-11-20 15:30:48 | db01 | ALTER TABLE USER ADD qq varchar(13) COMMENT 'QQ号码' | 失败(错误码 1146)
+2026-11-20 15:30:49 | db01 | ALTER TABLE USER modify qq varchar(15) COMMENT 'QQ号码' | 失败(错误码 1146)
+2026-11-20 15:30:50 | db01 | ALTER TABLE USER CHANGE qq qq_num VARCHAR(15) COMMENT 'QQ号码' | 失败(错误码 1146)
+2026-11-20 15:30:50 | db01 | ALTER TABLE USER ADD wechat varchar(10) UNIQUE COMMENT '微信账号' | 失败(错误码 1146)
+2026-11-20 15:30:51 | db01 | ALTER TABLE USER RENAME TO user | 失败(错误码 1146)
+2026-11-20 15:30:52 | db01 | CREATE TABLE `user_copy` LIKE `user`
+2026-11-20 15:30:53 | db01 | INSERT INTO `user_copy` SELECT * FROM `user`
+2026-11-20 15:30:53 | db01 | DROP TABLE user_copy
+2026-11-20 15:30:53 | db01 | ALTER TABLE user DROP COLUMN wechat | 失败(错误码 1091)
